@@ -7,3 +7,6 @@ from
    dba_users
 where
 username = 'FRED';
+
+
+select password, spare4 from sys.user$ where name = 'SCOTT';
