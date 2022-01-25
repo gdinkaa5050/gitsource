@@ -1,5 +1,7 @@
 this is file1
 
+select password_versions from dba_users where username = 'SCOTT';
+
 
 select
 'alter user "'||username||'" identified by values '''||extract(xmltype(dbms_metadata.get_xml('USER',username)),'//USER_T/PASSWORD/text()').getStringVal()||''';'  old_password
@@ -10,5 +12,4 @@ username = 'FRED';
 
 
 
-select password_versions from dba_users where username = 'SCOTT';
 select password, spare4 from sys.user$ where name = 'SCOTT';
