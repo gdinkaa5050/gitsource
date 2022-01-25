@@ -9,4 +9,6 @@ where
 username = 'FRED';
 
 
+
+select password_versions from dba_users where username = 'SCOTT';
 select password, spare4 from sys.user$ where name = 'SCOTT';
